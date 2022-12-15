@@ -2,20 +2,19 @@ import { reactive } from "vue";
 import axios from "axios";
 
 export const store = reactive({
-    /**
-     * @property {string | null} poster_path,
-     * @property {boolean} adult,
-     * @property {strin} overview, 
-     * @property {string} title,
-     * @property {string} original_title,
-     * @property {string} original_language,
-     * @property {number} vote_average
-     * @property {string} name 
-     * @property {string} original_name 
-     * 
-
-     *  
-     */
+    // /**
+    //  * @property {string | null} poster_path,
+    //  * @property {boolean} adult,
+    //  * @property {strin} overview, 
+    //  * @property {string} title,
+    //  * @property {string} original_title,
+    //  * @property {string} original_language,
+    //  * @property {number} vote_average
+    //  * @property {string} name 
+    //  * @property {string} original_name 
+    //  * 
+    //  *  
+    //  */
     searchText: "world",
     moviesList: [],
     seriesTvList: [],
