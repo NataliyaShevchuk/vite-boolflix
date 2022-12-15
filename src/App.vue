@@ -1,18 +1,27 @@
 <script>
-import {store} from "./store";
+import {fetchMovies, fetchSeriesTv, store} from "./store";
 import axios from 'axios';
+import TheMain from "./components/TheMain.vue";
 
 export default {
+  components: {TheMain},
   data() {
     return {
       store,
+
+    }
+  },
+  methods: {
+    performSearchOn (){
+      fetchMovies();
+      fetchSeriesTv();
     }
   },
 }
 </script>
 
 <template>
-  
+    <TheMain @performSearch="performSearchOn"/>
 </template>
 
 <style lang="scss">
