@@ -5,16 +5,16 @@ export default{
     data(){
         return{
             store,
-            userSearch: " ",
+            // userSearch: " ",
         }
     },
-    emits: ["performSearch"],
-    methods: {
-        onButtonSearch (){
-            this.store.searchText = this.userSearch;
-            this.$emit("performSearch");
-        }
-    },
+    // emits: ["performSearch"],
+    // methods: {
+    //     onButtonSearch (){
+    //         this.store.searchText = this.userSearch;
+    //         this.$emit("performSearch");
+    //     }
+    // },
     created() {
         fetchMovies();
         fetchSeriesTv();
@@ -26,13 +26,13 @@ export default{
 <template>
     
     <div class="container">
-        <header class="d-flex m-3">
+        <!-- <header class="d-flex m-3">
             <input v-model="userSearch" class="form-control w-100 mx-2" type="text" placeholder="Ciao! Cosa avevi in mente?" name="title">
             <button class="btn btn-primary"
             @click="onButtonSearch">
                 <i class="fa-solid fa-magnifying-glass"></i> 
             </button>
-        </header>
+        </header> -->
         <ul  class="d-flex gap-4 flex-wrap">
             <li class="list-unstyled col" v-for="(singleMovie, index) in store.moviesList" :key="index">
                 <img :src="store.img.link + store.img.size + singleMovie.poster_path" alt="">
