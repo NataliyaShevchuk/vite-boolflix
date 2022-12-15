@@ -22,6 +22,7 @@ export default{
 <template>
     <header>
         <div class="container">
+            <h2 class="head-text">Boolflix</h2>
             <div class="d-flex m-3">
                 <input v-model="userSearch" class="form-control w-100 mx-2" type="text" placeholder="Ciao! Cosa avevi in mente?" name="title">
                 <button class="btn btn-primary"
@@ -35,5 +36,6 @@ export default{
 
 <style lang="scss">
     @use "../style/general.scss" as *;
+    
 </style>
 

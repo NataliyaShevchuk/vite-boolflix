@@ -1,12 +1,12 @@
 <script>
-import {fetchMovies, fetchSeriesTv, store} from "./store";
 import axios from 'axios';
 import TheMain from "./components/TheMain.vue";
 import TheHeader from "./components/TheHeader.vue";
-import CardMovies from "./components/CardMovies.vue";
+// import CardMovies from "./components/CardMovies.vue";
+import {fetchMovies, fetchSeriesTv, store} from "./store";
 
 export default {
-  components: {TheMain, TheHeader, CardMovies },
+  components: {TheMain, TheHeader },
   data() {
     return {
       store,
@@ -22,11 +22,14 @@ export default {
 </script>
 
 <template>
-  <TheHeader @performSearch="performSearchOn"/>
-    <TheMain />
+
+    <TheHeader @performSearch="performSearchOn"/>
+      <TheMain />
+
 </template>
 
 <style lang="scss">
 @use "./style/general.scss" as *;
+
 
 </style>
