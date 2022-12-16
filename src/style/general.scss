@@ -48,12 +48,9 @@ body{
         cursor: pointer;
         display: block;
         background-color: hsla(0, 0%, 0%, 0.083);
+        position: absolute;
+        top: 23rem;
+        left: 3rem;
+        bottom: 0;
     }
-}
-
-.position{
-    position: absolute;
-    top: 0;
-    left:0;
-    bottom: 0;
 }

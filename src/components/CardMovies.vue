@@ -19,12 +19,15 @@
 </script>
 
 <template>
-    <div>
-        <img :src="store.img.link + store.img.size + singleMovie.poster_path" alt="">
-        <h3> {{singleMovie.title}} </h3>
-        <h4> {{singleMovie.original_title}} </h4>
-        <h5> {{singleMovie.original_language}} </h5>
-        <h6> {{singleMovie.vote_average}} </h6>
+    <div class="">
+        <img class="position-relative " :src="store.img.link + store.img.size + singleMovie.poster_path" alt="">
+        <div class=" overlay">
+            <h3> {{singleMovie.title}} </h3>
+            <h4> {{singleMovie.original_title}} </h4>
+            <h5> {{singleMovie.original_language}} </h5> 
+            <h6 v-for="star in starsRate"> <i  :class="star" class="fa-solid fa-star"></i> </h6>
+            <p> {{singleMovie.overview}} </p>
+        </div>
     </div>
 </template>
 
