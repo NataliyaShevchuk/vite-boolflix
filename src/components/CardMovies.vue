@@ -14,7 +14,29 @@
             return {
                 store,
             }
-        }
+        },
+        methods: {
+            starsRate(){
+            let decimalRate = Math.round(this.singleMovie.vote_average / 2);
+            console.log(decimalRate, "rate");
+            const starsRating = [];
+
+            for(let i=0; i < 5; i++){
+                this.starsRating.push(  i < decimalRate)
+                let fullStar = i < decimalRate;
+
+                if( decimalRate === i && i === 5){
+                    fullStar.push("fa-solid fa-star");
+                }else {
+                    fullStar.push("fa-regular fa-star");
+                }
+                starsRating.push(fullStar);
+            }
+
+            return this.starsRating;
+            
+            }
+        },
     }
 </script>
 

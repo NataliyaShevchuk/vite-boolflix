@@ -41,16 +41,21 @@ body{
         }
 }
 
+img:hover .overlay{
+    cursor: pointer;
+}
+
 .overlay{
     display: none;
     
     &:hover{
         cursor: pointer;
         display: block;
-        background-color: hsla(0, 0%, 0%, 0.083);
+        background-color: hsla(0, 0%, 0%, 0.53);
         position: absolute;
-        top: 23rem;
-        left: 3rem;
+        top: 7rem;
+        left: 3.8rem;
         bottom: 0;
+        width: 346px;
     }
 }
